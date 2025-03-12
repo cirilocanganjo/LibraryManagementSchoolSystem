@@ -31,14 +31,7 @@ use App\Models\borrowed_book_rating;
 |
 */
 
-Route::get("/credentials", function(){
-    \App\Models\User::create([
-        "name" => "Cirilo Canganjo",
-        "password" => bcrypt("admin"),
-        "type" => "bibliotecario"
-    ]);
-    return "created";
-});
+;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
